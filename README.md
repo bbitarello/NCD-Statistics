@@ -1,5 +1,5 @@
 **************************************************
-    Author: Bárbara D Bitarelol
+    Author: Bárbara D Bitarelo
 
     Created: 27.03.2015
 
@@ -23,9 +23,8 @@ NCD statistics measure the average difference between allele frequencies in a gi
 
 
 Here, we show how to:
-
-1)Run NCD1 and NCD2 (ongoing)
-2) Using examples from the manuscript (see above) which can be extended to other species
+* item  Run *NCD1* and *NCD2* (ongoing)
+* item  Using examples from the manuscript (see above) which can be extended to other species
 
 *************************************************************************
 
@@ -33,11 +32,14 @@ Here, we show how to:
 Running NCD:
 
 this requires:
-	*item 1 SNP input data (file in modified VCF format, see below an example)
-	*item 2 Fix differences (FD) input data (e.g. human-chimp FD bed file, as used in the manuscript)
+	* item 1 SNP input data (file in modified VCF format, see below an example)
+
+	* item 2 Fix differences (FD) input data (e.g. human-chimp FD bed file, as used in the manuscript)
 	Note: *NCD1* only requires the first input file, whereas NCD2 requires both.
+
 	* item 3 SGE script for parallelizing (option A)  **OR** parallelizing option without sge script.(option B)
-	*item Coming up: an optimized R script that does not require parallelizing jobs (this will be called option C)
+
+	* item 4 Coming up: an optimized R script that does not require parallelizing jobs (this will be called option C)
 
 Note: although NCD can be run withour parallelizing, that takes quite some time. If you have a cluster or a supercomputer, it is best to use it (option A, below). If you don't have this, you will use option B.In any case, you need first to download the input data. In the near future, we want to provide a better R function to calculate NCD that does not require parallelizing.
 
