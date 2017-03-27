@@ -32,18 +32,19 @@ Here, we show how to:
 Running NCD:
 
 this requires:
-	* item 1 SNP input data (file in modified VCF format, see below an example)
+	
+	* SNP input data (file in modified VCF format, see below an example)
 
-	* item 2 Fix differences (FD) input data (e.g. human-chimp FD bed file, as used in the manuscript)
+	* Fixed differences (FD) input data (e.g. human-chimp FD bed file, as used in the manuscript)
 	Note: *NCD1* only requires the first input file, whereas NCD2 requires both.
 
-	* item 3 SGE script for parallelizing (option A)  **OR** parallelizing option without sge script.(option B)
+	* SGE script for parallelizing (option A)  **OR** parallelizing option without sge script.(option B)
 
-	* item 4 Coming up: an optimized R script that does not require parallelizing jobs (this will be called option C)
+	* Coming up: an optimized R script that does not require parallelizing jobs (this will be called option C)
 
 Note: although NCD can be run withour parallelizing, that takes quite some time. If you have a cluster or a supercomputer, it is best to use it (option A, below). If you don't have this, you will use option B.In any case, you need first to download the input data. In the near future, we want to provide a better R function to calculate NCD that does not require parallelizing.
 
-
+*************************************
 
 Example input data (SNP data):
 
@@ -54,22 +55,29 @@ Example input data (SNP data):
 
 Note: a longer version of this is in example_input_files/
 
+Example FD file
+
+to be continued...
+
+
+
 ************************************************************************
  Getting Started: Options A and B
 ************************************************************************
 
 First:
 
-clone this repo: go to your directory and clone:
+* clone this repo: go to your directory and clone:
 
 ```
 git clone https://github.com/bbitarello/NCD-statistics.git
 ```
 
-go to root NCD directory
+* go to root NCD directory
+
 ```
 cd NCD-statistics/
-chmod 777 * #this will avoide several issues. Make sure you can do this.
+chmod 777 * #this will avoide several issues. Make sure you are allowed to do this.
 ```
 
 **Important Note**: Please note the paths for the files, logs, and tmp directories and addapt them as needed. Only 4 files need their paths to be edited:
