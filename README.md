@@ -51,6 +51,7 @@ Example input data (SNP data):
 |   1   | 834088  |  rs192235345  |  T  |  C  |  .  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  1  |  0  |  0  |  0  |  0  |
 
 Note: a longer version of this is in example_input_files/
+
 ************************************************************************
  Getting Started: Options A and B
 ************************************************************************
@@ -100,30 +101,6 @@ vim scripts/run_ncv_allpops_Rscript_nSGE.r #loading the NCV funciont in line 63
 **IMPORTANT NOTE**: if you use this option, make sure you go to the file which ends with .sge in the scripts folder and edit it according to your usual SGE settings. Also, replace my email by yours.
 
 
-************************************************************************
- DOWNLOAD INPUT DATA DOWNLOAD INPUT DATA DOWNLOAD INPUT DATA
-************************************************************************
-
-Download all the input data.
-
-#These files are too big to be uploaded to github.
-#They will be provided by the author upon request in the form of a bgzip file that can be decompressed inside this directory.
-#then the following directories will be generated: 
-#outgroup_files: FD files between human and chimp for each chromosome
-#chr1-chr22: separate directories for each chromosome containing processed VCF filees from 1000G Phase I as described in the Methods section of the paper.
-
-
-#download the input files from this link
-
-wget https://www.dropbox.com/s/irbhaesubjc48np/input_data.tar.gz?dl=0
-
-#and unzip
-
-mv input_data.tar.gz\?dl=0  input_data.tar.gz
-gunzip input_data.tar.gz
-tar -zxvf input_data.tar --exclude "README"
-
-
 ############################################################
 #
 ##### Option A ##### Option A ##### Option A ##### Option A
@@ -161,26 +138,5 @@ install.packages('littler')
 ./run_NCV.sh
 
 #this will parallelize the jobs using 'GNU parallel'. It is not a very clever solution, but it works nevertheless.
-
-########################## ############################# ####################### ######################### #############
-########### Reading in Scan data #######################
-2a) Reads in NCV results, includes window coverage data
-
-
-#under construction.
-
-
-2b) Corrects NCV values with 10,000 sims for bins of Inf. Sites
-
-
-#under constrcution.
-
-######################## ######################## ###########################
-3) Makes the function find.genes and provides possibilities for the user to
-query NCV results with this function
-
-
-
-#this is optional, not sure if I will do it.
 
 
