@@ -58,6 +58,7 @@ Note: a longer version of this is in example_input_files/
 Example input data (fixed differences between ingroup and outgroup; in this case, human and chimpanzee)
 
 | 22 | 16285122  | c | t |
+| -- | --------- | - | - |
 | 22 | 16285141  | t | c |
 | 22 | 16285157  | a | c |
 | 22 | 16285195  | c | t |
