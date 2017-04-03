@@ -55,11 +55,14 @@ Example input data (SNP data):
 
 Note: a longer version of this is in example_input_files/
 
-Example FD file
+Example input data (fixed differences between ingroup and outgroup; in this case, human and chimpanzee)
 
-to be continued...
+| 22 | 16285122  | c | t |
+| 22 | 16285141  | t | c |
+| 22 | 16285157  | a | c |
+| 22 | 16285195  | c | t |
 
-
+**Note:** this is a bed file. It includes a,c,g,t,A,C,G,T. The code will consider c==C, t==T, etc. If you wish to change this, feel free to edit the code.
 
 ************************************************************************
  Getting Started: Options A and B
