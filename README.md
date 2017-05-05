@@ -91,4 +91,4 @@ Many thanks to @VitorAguiar  (https://github.com/VitorAguiar) with optimization 
 **Updates**
 
 Soon: will fix NCD2 so that it runs even when there are no FDs in the input file.
-Also: unknown bug in NCD2 that needs fixing.
+Also: unknown bug in NCD2 that needs fixing. **update: fixed**added allow.cartesian=TRUE
