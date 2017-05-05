@@ -101,7 +101,7 @@ X[order(as.numeric(POS))]-> X
 
 
   X_NCD <-
-    X_windows[Z][MAF!=0 & MAF!=1][
+    X_windows[Z, allow.cartesian=TRUE][MAF!=0 & MAF!=1][
       , .(N_Raw= N_Raw,
           N_SNPs_cor=N_SNPs_cor,
                 N_FDs_Raw=N_FDs_Raw,
