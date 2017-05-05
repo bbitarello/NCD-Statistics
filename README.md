@@ -87,3 +87,7 @@ Note that the runtime will vary considerably depending on computational constrai
 **Acnowledgements**
 
 Many thanks to @VitorAguiar  (https://github.com/VitorAguiar) with optimization of the NCD codes.
+
+**Updates**
+
+Soon: will fix NCD2 so that it runs even when there are no FDs in the input file.
