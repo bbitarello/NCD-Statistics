@@ -3,7 +3,7 @@ Input Files
 *************
 
 
-This data is only for example purposes. The SNP data is fro Phase 3 1000 Genomes. We made this example input by taking the first 80,000 lines of each chromosome, so the results from this example do not reproduce those of the paper.
+This data is only for example purposes. The SNP data is fro Phase 3 1000 Genomes. We made this example input by taking the first 300,000 lines of each chromosome (for both SNP and FD files), so the results from this example do not reproduce those of the paper.
 
 **SNP File**
 
@@ -30,14 +30,12 @@ The output of the above command should look like this:
 |1 | 10511  | 1\|10511 | G | A | 1.000000 | 0.000000 | NA | 0.000000 |
 |1 | 10539  | 1\|10539 | C | A | 1.000000 | 0.000000 | NA | 0.000000 |
 |1 | 10542  | 1\|10542 | C | T | 1.000000 | 0.000000 | NA | 0.000000 |
-| --- | -- | --- | --------- | -- |
-| --- | -- | --- | --------- | -- |
-| --- | -- | --- | --------- | -- |
-| 1 | 249239825 | 1\|249239825 | G | T | 1.000000 | 0.000000 | NA | 0.000000 |
-| 1 | 249239837 | 1\|249239837 | G | C | 1.000000 | 0.000000 | NA | 0.000000 |
-| 1 | 249239902 | 1\|249239902 | G | T | 0.626263 | 0.373737 | NA | 0.373737 |
-| 1 | 249240219 | 1\|249240219 | A | T | 0.717172 | 0.282828 | NA | 0.282828 |
-| 1 | 249240539 | 1\|249240539 | T | G | 0.671717 | 0.328283 | NA | 0.328283 |
+---
+|1 | 9682490 | 1\|9682490 | A | T | 1.000000 | 0.0000000 | NA | 0.0000000 |
+|1 | 9682512 | 1\|9682512 | C | T | 1.000000 | 0.0000000 | NA | 0.0000000 |
+|1 | 9682534 | 1\|9682534 | C | T | 0.934343 | 0.0656566 | NA | 0.0656566 |
+|1 | 9682555 | 1\|9682555 | G | A | 0.989899 | 0.0101010 | NA | 0.0101010 |
+|1 | 9682631 | 1\|9682631 | G | A | 0.525253 | 0.4747470 | NA | 0.4747470 |
 
 Where CHR and POS define the chromosomal position of the SNP, ID is an ID for the position, defined based on the first two columns, REF is the human reference allele (hg19), ALT is the alterante allele, AF1:AF3 are the allele frequencies of the alleles, MAF is the minor allele frequency.
 
@@ -67,14 +65,12 @@ The output of the above command should look like this:
 |1 | 834214 | T  | C | 1\|834214 |
 |1 | 834215 | G  | A | 1\|834215 |
 |1 | 834240 | G  | A | 1\|834240 |
-|. |... | ... | ... | ... |
-|. |... | ... | ... | ... |
-|. |... | ... | ... | ... |
-|1 | 249213096 | C | T | 1\|249213096 |
-|1 | 249213097 | C | G | 1\|249213097 |
-|1 | 249213119 | A | G | 1\|249213119 |
-|1 | 249213301 | C | T | 1\|249213301 |
-|1 | 249213941 | C | T | 1\|249213941 |
+---
+| 1 | 31645394 | T | C 1|31645394 |
+| 1 | 31645397 | G | A 1|31645397 |
+| 1 | 31645398 | A | C 1|31645398 |
+| 1 | 31645413 | C | T 1|31645413 |
+| 1 | 31645454 | A | G 1|31645454 |
 
 Where CHR and POS define the chromosomal position, REF is the human reference allele (hg19), Chimp_REF is the chimp reference allel (pantro2), and ID is an ID for the position, defined based on the first two columns.
 

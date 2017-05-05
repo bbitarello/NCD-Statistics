@@ -76,14 +76,13 @@ source('scripts/NCD_func.R') #loads NCD functions NCD1 and NCD2
 readRDS('example_input_files/SNP_test_input.rds')-> SNP_input #necessary for NCD1 and NCD2
 readRDS('example_input_files/FD_test_input.rds')-> FD_input  #only necessary for NCD1
 system.time(example.run<-foreach(x=1:22, .combine="rbind", .packages=c("data.table")) %dopar% NCD1(X=SNP_input[[x]], W=3000, S=1500)); #  
-system.time(LWK.run2<-foreach(x=1:22, .combine="rbind", .packages=c("data.table")) %dopar%
-         NCD2(X=SNP_input[[x]], Y=FD_input[[x]],  W=3000, S=1500)); # 
+system.time(LWK.run2<-foreach(x=1:22, .combine="rbind", .packages=c("data.table")) %dopar%  NCD2(X=SNP_input[[x]], Y=FD_input[[x]],  W=3000, S=1500)); # 
 ```
-Note that the runtime will vary considerably depending on computational constraints. The reported value is for 11 cores in registerDoMC(11). See example_input_files/README.md 
+Note that the runtime will vary considerably depending on computational constraints. My experience with registerDoMC(11) is that each scan for the entire genome takes about one minute. However, the examples here encompass a smaller prpoportion of the genome so should run in about 15 seconds. See example_input_files/README.md 
 
-Important: This is an example. It is a roadmap of how NCD can be used for other input data. Even though the example input data is real, it does not reproduct the findings from the paper.
+**Important:** This is an example. It is a roadmap of how NCD can be used for other input data. Even though the example input data is real, it does not reproduct the findings from the paper.
 
 
-** Acnowledgements **
+**Acnowledgements**
 
-Many thanks to @VitorAguiar  https://github.com/VitorAguiar) with optimization of the NCD codes.
+Many thanks to @VitorAguiar  (https://github.com/VitorAguiar) with optimization of the NCD codes.
