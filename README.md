@@ -58,6 +58,7 @@ First:
 ```
 git clone https://github.com/bbitarello/NCD-statistics.git
 ```
+Note: this may take a few minutes because large example files are provided!
 
 * go to root NCD directory
 
