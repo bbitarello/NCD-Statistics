@@ -1,10 +1,9 @@
 #**************************
 
-This directory contains three scripts:
+NCD_func.R #contains NCD1 and NCD2 functions.
 
-run_NCD1.r #runs NCD1
+preamble.R #should be loaded upon starting R session.
 
-run_NCD2.r #runs NCD2
+See README.md in the root directory.
 
-read_input_data.R #prepares SNp and FD data for being used by NCD1 and NCD2 functions.
 
