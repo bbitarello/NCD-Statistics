@@ -81,7 +81,7 @@ system.time(example.run.ncd2<-foreach(x=1:22, .combine="rbind", .packages=c("dat
 ```
 Note that the runtime will vary considerably depending on computational constraints. My experience with registerDoMC(11) is that each scan for the entire genome takes about one minute. The examples here encompass a smaller proportion of the genome and run in a few seconds. See example_input_files/README.md 
 
-**Important:** This is an example. It is a roadmap of how NCD can be used for other input data. Even though the example input data is real, it does not reproduct the findings from the paper.
+**Important:** This is an example. It is a roadmap of how NCD can be used for other input data (including non-SNP data). Even though the example input data is real (phase 3 1000 Genomes), it does not reproduce the findings from the paper.
 
 
 **Acnowledgements**
@@ -91,4 +91,5 @@ Many thanks to @VitorAguiar  (https://github.com/VitorAguiar) with optimization 
 **Updates**
 
 Soon: will fix NCD2 so that it runs even when there are no FDs in the input file.
-Also: unknown bug in NCD2 that needs fixing. **update: fixed**added allow.cartesian=TRUE
+
+Also: unknown bug in NCD2 that needs fixing. (**update: fixed**added allow.cartesian=TRUE)
