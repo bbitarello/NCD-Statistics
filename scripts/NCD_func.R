@@ -113,10 +113,26 @@ X[order(as.numeric(POS))]-> X
           NCD2_tf0.3 = sqrt(sum((c(rep(0,unique(N_FDs_cor)),MAF)-0.3)^2)/IS)),
       by = Win.ID]
 
+      X2_NCD <-
+        X_windows[!(Win.ID %in% unique(Y2_windows$Win.ID))][MAF!=0 & MAF!=1][
+                 , .(N_Raw= N_Raw,
+                N_SNPs_cor=N_SNPs_cor,
+                N_FDs_Raw=0,
+                N_FDs_cor=0,
+                PtoD=N_SNPs_cor/(0+1),
+                IS=N_SNPs_cor,
+          NCD2_tf0.5 = sqrt(sum((MAF-0.5)^2)/N_SNPs_cor),
+          NCD2_tf0.4 = sqrt(sum((MAF-0.4)^2)/N_SNPs_cor),
+          NCD2_tf0.3 = sqrt(sum((MAF-0.3)^2)/N_SNPs_cor)),
+      by = Win.ID]
+
+
+        rbind(X_NCD, X2_NCD)-> X3_NCD
+
   print (paste0('NCD2 calculations done for chr ', unique(X$CHR)))
 
-        setkey(X_NCD, Win.ID)
-        unique(X_NCD)
+        setkey(X3_NCD, Win.ID)
+        unique(X3_NCD)
 }
 
 
