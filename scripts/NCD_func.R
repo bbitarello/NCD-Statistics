@@ -13,9 +13,10 @@ NCD1 <- function(X, W = 100000, S = 50000) {
     print (paste0('Finished setting up coordinates for chr ', unique(X$CHR)))
 
     setkey(windows_dt, POS, POS2) #
-  X[, POS2 := POS] #
-
-  X_windows <-
+    X[, POS2 := POS] #
+    setkey(X, POS, POS2)
+  
+   X_windows <-
     foverlaps(X, windows_dt, type = "within", nomatch = 0L)[ #this is not ideal but for now it's fine
       , window := .GRP, by = .(POS, POS2)][
         order(window, i.POS)][
