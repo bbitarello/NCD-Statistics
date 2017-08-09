@@ -62,7 +62,7 @@ X[order(as.numeric(POS))]-> X
   X[, POS2 := POS] # := creates new column. Why is he doing this again? I think it's because last clolum needs to be pos for the foroverlaps function
 
   Y[, POS2 := POS]
-
+  setkey(X, POS,POS2)
   X_windows <-
     foverlaps(X, windows_dt, type = "within", nomatch = 0L)[ #this is not ideal because counts end position but it's okay as long as i document this well.
       , window := .GRP, by = .(POS, POS2)][
@@ -98,6 +98,7 @@ X[order(as.numeric(POS))]-> X
         setkey(Y_u_windows, Win.ID)
   print (paste0('Finished selecting SNPs and FDs  per window for chr ', unique(X$CHR)))
         #final dt
+	if(nrow(Y2_windows)>0){
         X2_windows[Y_u_windows][Y3_windows][,PtoD:= N_SNPs_cor/(N_FDs_cor+1)][, MAF:=NULL][, IS:=N_SNPs_cor+N_FDs_cor]-> Z
 
 
@@ -113,7 +114,10 @@ X[order(as.numeric(POS))]-> X
           NCD2_tf0.4 = sqrt(sum((c(rep(0,unique(N_FDs_cor)),MAF)-0.4)^2)/IS),
           NCD2_tf0.3 = sqrt(sum((c(rep(0,unique(N_FDs_cor)),MAF)-0.3)^2)/IS)),
       by = Win.ID]
-
+}
+setkey(X_NCD, Win.ID)
+unique(X_NCD)
+else{
       X2_NCD <-
         X_windows[!(Win.ID %in% unique(Y2_windows$Win.ID))][MAF!=0 & MAF!=1][
                  , .(N_Raw= N_Raw,
@@ -128,12 +132,12 @@ X[order(as.numeric(POS))]-> X
       by = Win.ID]
 
 
-        rbind(X_NCD, X2_NCD)-> X3_NCD
+     #   rbind(X_NCD, X2_NCD)-> X3_NCD
 
   print (paste0('NCD2 calculations done for chr ', unique(X$CHR)))
 
-        setkey(X3_NCD, Win.ID)
-        unique(X3_NCD)
+        setkey(X2_NCD, Win.ID)
+        unique(X2_NCD)
 }
 
 
