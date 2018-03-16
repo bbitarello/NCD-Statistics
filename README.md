@@ -1,9 +1,9 @@
 **************************************************
-    Author: Bárbara D Bitarelo
+    Author: Bárbara D. Bitarelo
 
     Created: 27.03.2015
 
-    Last modified: 27.07.2017
+    Last modified: 16.08.2017
 
     Language: R
 
@@ -11,7 +11,7 @@
 
 Welcome to the NCD repo! 
 
-This repository provided scripts related to the manuscript: http://biorxiv.org/content/early/2017/03/22/119529
+This repository provided scripts related to the article "Signatures of long-term balancing selection in human genomes": https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evy054/4938688
 
 
 **What are the  NCD (Non-Central Deviation) statistics?**
