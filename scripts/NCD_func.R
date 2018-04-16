@@ -42,7 +42,8 @@ NCD1 <- function(X, W = 100000, S = 50000) {
   setkey(unique_windows, Win.ID, N_SNPs_cor)
   setkey(X_NCD, Win.ID, N_SNPs_cor)
 
-  unique(X_NCD[unique_windows])
+  unique(X_NCD[unique_windows])-> X_NCD
+	return(X_NCD)
 }
 
 
@@ -119,7 +120,8 @@ X[order(as.numeric(POS))]-> X
 
   print (paste0('NCD2 calculations done for chr ', unique(X$CHR)))
 setkey(X_NCD, Win.ID)
-unique(X_NCD)
+unique(X_NCD)-> X_NCD
+return(X_NCD)
 }
 if(nrow(Y2_windows)==0){
       X2_NCD <-
@@ -143,8 +145,8 @@ if(nrow(Y2_windows)==0){
   print (paste0('NCD2 calculations done for chr ', unique(X$CHR)))
 
         setkey(X2_NCD, Win.ID)
-        unique(X2_NCD)
+        unique(X2_NCD)-> X2_NCD
+	return(X2_NCD)
 
 }
-
 }
