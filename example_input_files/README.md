@@ -30,12 +30,6 @@ The output of the above command should look like this:
 |1 | 10511  | 1\|10511 | G | A | 1.000000 | 0.000000 | NA | 0.000000 |
 |1 | 10539  | 1\|10539 | C | A | 1.000000 | 0.000000 | NA | 0.000000 |
 |1 | 10542  | 1\|10542 | C | T | 1.000000 | 0.000000 | NA | 0.000000 |
----
-|1 | 9682490 | 1\|9682490 | A | T | 1.000000 | 0.0000000 | NA | 0.0000000 |
-|1 | 9682512 | 1\|9682512 | C | T | 1.000000 | 0.0000000 | NA | 0.0000000 |
-|1 | 9682534 | 1\|9682534 | C | T | 0.934343 | 0.0656566 | NA | 0.0656566 |
-|1 | 9682555 | 1\|9682555 | G | A | 0.989899 | 0.0101010 | NA | 0.0101010 |
-|1 | 9682631 | 1\|9682631 | G | A | 0.525253 | 0.4747470 | NA | 0.4747470 |
 
 Where CHR and POS define the chromosomal position of the SNP, ID is an ID for the position, defined based on the first two columns, REF is the human reference allele (hg19), ALT is the alterante allele, AF1:AF3 are the allele frequencies of the alleles, MAF is the minor allele frequency.
 
@@ -65,12 +59,6 @@ The output of the above command should look like this:
 |1 | 834214 | T  | C | 1\|834214 |
 |1 | 834215 | G  | A | 1\|834215 |
 |1 | 834240 | G  | A | 1\|834240 |
----
-| 1 | 31645394 | T | C 1|31645394 |
-| 1 | 31645397 | G | A 1|31645397 |
-| 1 | 31645398 | A | C 1|31645398 |
-| 1 | 31645413 | C | T 1|31645413 |
-| 1 | 31645454 | A | G 1|31645454 |
 
 Where CHR and POS define the chromosomal position, REF is the human reference allele (hg19), Chimp_REF is the chimp reference allel (pantro2), and ID is an ID for the position, defined based on the first two columns.
 
