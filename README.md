@@ -3,7 +3,7 @@
 
     Created: 27.03.2015
 
-    Last modified: 16.08.2017
+    Last modified: 16.April.2018
 
     Language: R
 
@@ -75,7 +75,7 @@ Second:
 source('scripts/preamble.R') #loads several packages
 source('scripts/NCD_func.R') #loads NCD functions NCD1 and NCD2
 readRDS('example_input_files/SNP_test_input.rds')-> SNP_input #necessary for NCD1 and NCD2
-readRDS('example_input_files/FD_test_input.rds')-> FD_input  #only necessary for NCD1
+readRDS('example_input_files/FD_test_input.rds')-> FD_input  #only necessary for NCD2
 system.time(example.run.ncd1<-foreach(x=1:22, .combine="rbind", .packages=c("data.table")) %dopar% NCD1(X=SNP_input[[x]], W=3000, S=1500)); #  6 seconds 
 system.time(example.run.ncd2<-foreach(x=1:22, .combine="rbind", .packages=c("data.table")) %dopar%  NCD2(X=SNP_input[[x]], Y=FD_input[[x]],  W=3000, S=1500)); # 9 seconds
 ```
@@ -90,5 +90,6 @@ Many thanks to @VitorAguiar  (https://github.com/VitorAguiar) with optimization 
 
 **Updates**
 
-Soon: will fix NCD2 so that it runs even when there are no FDs in the input file.(**update: fixed)
+Soon: will fix NCD2 so that it runs even when there are no FDs in the input file.(**update: fixed**)
+**Update**: Fixed issue with NCD2 output.
 
