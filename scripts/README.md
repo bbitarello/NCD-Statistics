@@ -18,3 +18,13 @@ allele_freq1000G_phase3.R: makes SNP input data for NCD1 and NCD2
 
 
 
+
+##
+
+All.Results.Final.RData #all scanned windows
+
+Results.After.IS.Filter $self-explanatory. Filter is currently all windows where Nr.IS>=5
+
+#other info
+
+#run scripts in consecutive order.(script_1.R...script_8.R)
