@@ -1,0 +1,79 @@
+1) ###### Single population Africa - no selection
+
+msms -N 7310 -ms 20 1 -t 877.2 -r 456.144  -eN 0 1.980027 -eN 0.2024624 0.5043526
+
+~~~~~~~ Demographic parameters ~~~~~~~~~~
+-Ne = 7310
+-number of haplotypes = 20
+-region size = 1.2Mb
+-t  2.5*10^(-8)*4*7310*1.2*106
+-r  1.3*10^(-8)*4*7310*1.2*106
+-time of size change 148.000 years/25 = 5920gen --> 148000/25/(4*7310) = 0.2024624 [units of 4Ne]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+2) ###### Single population Africa - selection on a single variant
+
+same demographic parameters as above (single pop african, no selection)
+
+
+msms -N 7310 -ms 20 1 -t 877.2 -r 456.144  -eN 0 1.980027 -eN 0.2024624 0.5043526 -SI TIME 1 0   -Sc 0 1 SAA SaA Saa
+
+~~~~~~~ Selection parameters ~~~~~~~~
+-time when selection starts (starting by initial allele frequency -SI)
+-SI
+  TIME = 1.5 million years / 25 / (4*7300) = 2.051984 [units of 4Ne]	
+  TIME = 148.000years / 25 / (4*7300) = 0.2025 [units of 4Ne]
+  TIME = 30.000years / 25 / (4*7300) = 0.04109589 [units of 4Ne]
+  TIME = 10.000years / 25 / (4*7300) = 0.01369863 [units of 4Ne]
+ 
+  starting frequency of single variant  = 0
+-Sc
+  -Selection starts at present, goes back until -SI selection started (Sc backward, SI forward)
+-SAA/SaA/Saa: s*2*Ne; s[0.001,0.01] ; 
+e.g. for calculating selection strength from selection coefficients:
+
+0.001*2*7300 = 14.62
+0.005*2*7300 = 73.1
+0.01*2*7300 = 146.2
+
+Equal selection on homozygotes sAA 0 saA= 0.01 saa= 0   -->    SAA= 0 SaA = 146.2 Saa= 0 
+Unequal selection on homozygotes sAA = 0.001 saA = 0.005 saa= 0   -->   SAA= 14.62 SaA= 73.1 Saa= 0
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+3) ###### 3 population AF CEU JPT - no selection
+
+msms -N 7310 -ms 364 1 -t 877.2 -r 456.144 -I 3 124 60 180 -n 1 1.98003 -n 2 4.62571 -n 3 6.20653 -eg 0 2 110.7738 -eg 0 3 139.8551 
+-ma x 0.731 0.22807 0.731 x 0.90936 0.22807 0.90936 x -ej 0.0315 3 2 -en 0.0315 2 0.2546 -ema 0.0315 3 x 4.386 x 4.386 x x x x x 
+-ej 0.0698 2 1 -en 0.2025 1 1
+
+
+
+4) ###### 3 population AF CEU JPT - with selection
+
+msms -N 7310 -ms 364 1 -t 877.2 -r 456.144 -I 3 124 60 180 -n 1 1.98003 -n 2 4.62571 -n 3 6.20653 -eg 0 2 110.7738 -eg 0 3 139.8551 
+-ma x 0.731 0.22807 0.731 x 0.90936 0.22807 0.90936 x -ej 0.0315 3 2 -en 0.0315 2 0.2546 -ema 0.0315 3 x 4.386 x 4.386 x x x x x 
+-ej 0.0698 2 1 -en 0.2025 1 1
+
+-SI 0.04109589 3 0 0 0 -Sc 0 1 SAA SaA Saa -Sc 0 2 SAA SaA Saa -Sc 0 3 SAA SaA Saa  # Selection in the 2 existing demes starting 30kya then continuing in all 3 pops
+OR
+-SI 0.01369863 3 0 0 0  -Sc 0 1 SAA SaA Saa -Sc 0 2 SAA SaA Saa  -Sc 0 3 SAA SaA Saa # Selection in all 3 demes starting 10kya
+OR
+-SI 0.2025 3 0 0 0 -Sc 0 1 SAA SaA Saa -Sc 0 2 SAA SaA Saa  -Sc 0 3 SAA SaA Saa # Ancestral selection in African population 148kya continuing in all pops
+OR
+-SI 2.051984 3 0 0 0 -Sc 0 1 SAA SaA Saa -Sc 0 2 SAA SaA Saa  -Sc 0 3 SAA SaA Saa # Ancestral selection in African population 1.5mya continuing in all pops
+
+
+
+~~~~~~~ Selection parameters ~~~~~~~~
+
+For suggested selection strength values see single population example above. Values should be equal in all 3 demes.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
