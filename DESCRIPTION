@@ -1,0 +1,10 @@
+Package: NCD-Statistics
+Type: Package
+Title: NCD - Non Central Deviation Statistic
+Version: 0.1.0
+Authors: Bárbara Bitarello
+Maintainer: Bárbara Bitarello (barbarabitarello<at>gmail.com)
+Description: This set of code implements the NCD statistics as described in Bitarello et al. (2018), Genome Biology and Evolution
+License: GPL (>= 2)
+Encoding: UTF-8
+Depends: data.table, dplyr
