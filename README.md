@@ -3,13 +3,16 @@
 
     Created: 27.03.2015
 
-    Last modified: 16.April.2018
+    Last modified: 23 July 2021
 
     Language: R
 
 **************************************************
 
 Welcome to the NCD repo! 
+
+**UPDATE**: we have [a wiki](https://github.com/bbitarello/NCD-Statistics/wiki)! It is under construction, and has FAQs, links, and tutorials (soon). 
+
 
 This repository provided scripts related to the article "Signatures of long-term balancing selection in human genomes": https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evy054/4938688
 
