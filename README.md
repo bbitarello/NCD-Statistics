@@ -13,7 +13,6 @@ Welcome to the NCD repo!
 
 **UPDATE** (June 2022): We have an R package under development that implements NCD1 and NCD2. CHeck it out [here:](https://github.com/bbitarello/BalSelTools)
 
-**UPDATE**: we have [a wiki](https://github.com/bbitarello/NCD-Statistics/wiki)! It is under construction, and has FAQs, links, and tutorials (soon). 
 
 
 This repository provided scripts related to the article "Signatures of long-term balancing selection in human genomes": https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evy054/4938688
