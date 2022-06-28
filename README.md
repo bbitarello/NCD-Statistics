@@ -11,11 +11,11 @@
 
 Welcome to the NCD repo! 
 
-**UPDATE** (June 2022): We have an R package under development that implements NCD1 and NCD2. CHeck it out [here:](https://github.com/bbitarello/BalSelTools)
+**UPDATE** (June 2022): We have an R package under development that implements NCD1 and NCD2. Check it out [here:](https://github.com/bbitarello/BalSelTools)
 
 
 
-This repository provided scripts related to the article "Signatures of long-term balancing selection in human genomes": https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evy054/4938688
+This repository provided scripts related to the article ["Signatures of long-term balancing selection in human genomes": ](https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evy054/4938688)
 
 
 **What are the  NCD (Non-Central Deviation) statistics?**
