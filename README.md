@@ -29,7 +29,7 @@ NCD statistics measure the average difference between allele frequencies in a gi
 
 
 Here, we show how to:
-* item  Run *NCD1* and *NCD2* (ongoing)
+* item  Run *NCD1* and *NCD2* 
 * item  Using examples from the manuscript (see above) which can be extended to other species
 
 *************************************************************************
