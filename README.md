@@ -11,7 +11,7 @@
 
 Welcome to the NCD repo! 
 
-**UPDATE** (June 2022): We have an R package under development that implements NCD1 and NCD2. Check it out [here:](https://github.com/bbitarello/BalSelTools)
+**UPDATE** (June 2022): We have an R package under development that implements NCD1 and NCD2. Check it out [here:](https://github.com/bbitarello/balselr)
 
 
 
